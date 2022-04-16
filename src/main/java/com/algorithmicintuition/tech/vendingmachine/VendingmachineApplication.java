@@ -173,7 +173,7 @@ public class VendingmachineApplication implements CommandLineRunner {
 				break;
 			case "e":
 				run = false;
-				doneInserting = false;
+				doneInserting = true;
 				break;
 			case "f":
 				run = false;
@@ -185,7 +185,7 @@ public class VendingmachineApplication implements CommandLineRunner {
 			if (refunded == true) {
 				this.refundRemaningToUser();
 
-			} else if (doneInserting == false) {
+			} else if (doneInserting == true) {
 
 				System.out.println("Lets see what you can buy with: $"
 						+ this.df.format(this.vendingMachineService.getTotalPennyCount()));
